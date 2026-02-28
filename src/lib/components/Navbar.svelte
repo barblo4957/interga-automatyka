@@ -55,7 +55,7 @@
 
 		<!-- Mobile hamburger -->
 		<button
-			class="md:hidden flex items-center justify-center h-10 w-10 rounded-lg text-foreground/70 transition-colors hover:text-accent hover:bg-foreground/5"
+			class="md:hidden touch-manipulation flex items-center justify-center p-3 -m-2 rounded-lg text-foreground/70 transition-colors hover:text-accent hover:bg-foreground/5"
 			onclick={() => (mobileOpen = !mobileOpen)}
 			aria-label={mobileOpen ? 'Zamknij menu' : 'Otwórz menu'}
 		>
