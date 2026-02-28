@@ -13,7 +13,7 @@
 		class="absolute bottom-1/4 -left-32 h-72 w-72 rounded-full bg-accent/[0.04] blur-3xl"
 	></div>
 
-	<div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+	<div class="relative z-10 max-w-5xl mx-auto px-6 pt-32 lg:pt-40 text-center">
 		<div class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm text-accent">
 			<span class="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
 			Automatyka &bull; Elektryka &bull; Pomiary
