@@ -70,7 +70,7 @@
 
 	<a
 		href="#o-nas"
-		class="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/30 transition-colors hover:text-accent animate-bounce"
+		class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/30 transition-colors hover:text-accent animate-bounce"
 		aria-label="Przewiń niżej"
 	>
 		<ChevronDown size={32} />
