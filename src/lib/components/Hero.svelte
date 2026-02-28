@@ -3,7 +3,7 @@
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 </script>
 
-<section class="relative min-h-[100svh] flex flex-col justify-center items-center overflow-hidden pt-[7svh] lg:pt-[4svh] pb-[6svh] lg:pb-[4svh]">
+<section class="relative min-h-[100svh] flex flex-col justify-center items-center overflow-hidden pt-[7svh] pb-[6svh] lg:min-h-0 lg:h-[calc(100vh-5rem)] lg:pt-[clamp(3rem,6vh,6rem)] lg:pb-[clamp(2rem,4vh,4rem)]">
 	<div class="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/[0.08]"></div>
 
 	<div
@@ -70,7 +70,7 @@
 
 	<a
 		href="#o-nas"
-		class="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2 text-foreground/30 transition-colors hover:text-accent animate-bounce"
+		class="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2 lg:absolute lg:bottom-8 text-foreground/30 transition-colors hover:text-accent animate-bounce"
 		aria-label="Przewiń niżej"
 	>
 		<ChevronDown size={32} />
