@@ -3,7 +3,7 @@
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 </script>
 
-<section class="relative min-h-[100svh] flex flex-col justify-center items-center overflow-hidden pt-20">
+<section class="relative min-h-[100svh] flex flex-col justify-center items-center overflow-hidden pt-[18svh] pb-[10svh]">
 	<div class="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/[0.08]"></div>
 
 	<div
@@ -19,7 +19,7 @@
 			Automatyka &bull; Elektryka &bull; Pomiary
 		</div>
 
-		<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
+		<h1 class="text-[clamp(2.25rem,6svw+1rem,4.25rem)] font-extrabold tracking-tight leading-[1.1] mb-6">
 			<span class="text-foreground">Integra</span><br />
 			<span class="text-accent">Automatyka</span>
 		</h1>
