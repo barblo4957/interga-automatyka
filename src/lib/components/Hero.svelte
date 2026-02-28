@@ -52,7 +52,7 @@
 			</a>
 		</div>
 
-		<div class="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto">
+		<div class="mt-16 pb-20 grid grid-cols-3 gap-8 max-w-md mx-auto">
 			<div class="text-center">
 				<div class="text-2xl sm:text-3xl font-bold text-accent">10+</div>
 				<div class="text-xs text-foreground/40 mt-1">Lat doświadczenia</div>
@@ -70,7 +70,7 @@
 
 	<a
 		href="#o-nas"
-		class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/30 transition-colors hover:text-accent animate-bounce"
+		class="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2 text-foreground/30 transition-colors hover:text-accent animate-bounce"
 		aria-label="Przewiń niżej"
 	>
 		<ChevronDown size={32} />
