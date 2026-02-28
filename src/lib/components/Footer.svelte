@@ -46,8 +46,9 @@
 					Dane firmy
 				</h3>
 				<address class="not-italic text-sm text-foreground/60 space-y-2">
+					<p class="font-medium text-foreground">Integra Automatyka – Jakub Pieczka</p>
+					<p>ul. Owocowa 4, 44-360 Buków</p>
 					<p>NIP: {SITE_DATA.contact.nip}</p>
-					<p>Adres: {SITE_DATA.contact.address}</p>
 				</address>
 			</div>
 		</div>

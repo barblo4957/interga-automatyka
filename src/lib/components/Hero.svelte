@@ -3,7 +3,7 @@
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 </script>
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<section class="relative min-h-[85vh] flex flex-col justify-center items-center overflow-hidden">
 	<div class="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/[0.08]"></div>
 
 	<div

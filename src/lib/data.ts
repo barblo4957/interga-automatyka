@@ -57,7 +57,7 @@ export const SITE_DATA = {
 		{
 			title: 'Montaż szaf sterowniczych',
 			category: 'Elektryka',
-			image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop'
+			image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop'
 		},
 		{
 			title: 'System SCADA dla zakładu chemicznego',
