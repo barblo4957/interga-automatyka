@@ -8,29 +8,25 @@
 </script>
 
 <a href="/" class="inline-flex items-center gap-2.5 {className}" aria-label="Integra Automatyka — Strona główna">
-	<!-- Monogram SVG: "I" (biały) + "A" (pomarańczowy) — zawsze widoczny -->
-	<span class="inline-block size-8 shrink-0" style="width: 32px; height: 32px;">
+	<!-- Sygnet: niedokończona ramka + zębatka + litera I -->
+	<span class="inline-block shrink-0">
 		<svg
-			viewBox="0 0 40 36"
-			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			width="32"
-			height="32"
-			class="block w-full h-full object-contain"
+			viewBox="0 0 50 50"
+			class="block h-7 w-auto"
 			aria-hidden="true"
 			role="img"
 		>
-			<!-- "I" — pionowa belka z serifami -->
-			<rect x="3" y="4" width="6" height="28" rx="1.5" fill="#f4f4f5" />
-			<rect x="1" y="4" width="10" height="4" rx="1" fill="#f4f4f5" />
-			<rect x="1" y="28" width="10" height="4" rx="1" fill="#f4f4f5" />
-
-			<!-- "A" — trójkąt w górę + poprzeczka -->
 			<path
-				d="M16 32 L20 8 L24 8 L28 32 L25 32 L22 21 L19 32 Z"
-				fill="#f97316"
+				d="M10,10 H40 V40 H25 M10,10 V25"
+				fill="none"
+				stroke="#f97316"
+				stroke-width="3"
+				stroke-linecap="round"
 			/>
-			<rect x="20.5" y="19" width="7" height="3" rx="1" fill="#f97316" />
+			<path d="M8,35 L11,32 H15 L18,35 L16,40 H10 Z" fill="#f97316" />
+			<circle cx="13" cy="36" r="1.5" fill="#111827" />
+			<text x="20" y="32" font-family="Georgia, serif" font-weight="900" font-size="22" fill="#ffffff">I</text>
 		</svg>
 	</span>
 
