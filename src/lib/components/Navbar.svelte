@@ -20,7 +20,9 @@
 
 <nav class="fixed top-0 left-0 w-full z-50 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
 	<div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
-		<Logo />
+		<div class={mobileOpen ? 'max-md:hidden' : ''}>
+			<Logo />
+		</div>
 
 		<!-- Desktop nav -->
 		<ul class="hidden md:flex items-center gap-8">
@@ -53,9 +55,9 @@
 			</a>
 		</div>
 
-		<!-- Mobile hamburger -->
+		<!-- Mobile hamburger (ml-auto: zawsze przy prawej krawędzi, także gdy logo w pasku jest ukryte przy otwartym menu) -->
 		<button
-			class="md:hidden touch-manipulation flex items-center justify-center p-3 -m-2 rounded-lg text-foreground/70 transition-colors hover:text-accent hover:bg-foreground/5"
+			class="md:hidden ml-auto touch-manipulation flex items-center justify-center p-3 -m-2 rounded-lg text-foreground/70 transition-colors hover:text-accent hover:bg-foreground/5"
 			onclick={() => (mobileOpen = !mobileOpen)}
 			aria-label={mobileOpen ? 'Zamknij menu' : 'Otwórz menu'}
 		>
@@ -70,33 +72,42 @@
 	<!-- Mobile menu -->
 	{#if mobileOpen}
 		<div class="md:hidden border-t border-foreground/10 bg-background/95 backdrop-blur-lg">
-			<div class="px-6 py-4 space-y-1">
-				{#each navLinks as link}
+			<div class="px-6 py-6 flex flex-col items-center">
+				<div class="flex w-full justify-center mb-6">
+					<Logo />
+				</div>
+
+				<nav class="w-full max-w-sm flex flex-col items-center gap-1" aria-label="Menu mobilne">
+					{#each navLinks as link}
+						<a
+							href={link.href}
+							class="block w-full text-center rounded-lg px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-accent"
+							onclick={closeMobile}
+						>
+							{link.label}
+						</a>
+					{/each}
+				</nav>
+
+				<div
+					class="w-full max-w-sm mt-6 pt-6 border-t border-foreground/10 flex flex-col items-center text-center gap-3"
+				>
 					<a
-						href={link.href}
-						class="block rounded-lg px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-accent"
+						href="tel:{SITE_DATA.contact.phone.replace(/\s/g, '')}"
+						class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-accent"
 						onclick={closeMobile}
 					>
-						{link.label}
+						<Phone size={16} />
+						{SITE_DATA.contact.phone}
 					</a>
-				{/each}
-			</div>
-			<div class="border-t border-foreground/10 px-6 py-4 space-y-3">
-				<a
-					href="tel:{SITE_DATA.contact.phone.replace(/\s/g, '')}"
-					class="flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-accent"
-					onclick={closeMobile}
-				>
-					<Phone size={16} />
-					{SITE_DATA.contact.phone}
-				</a>
-				<a
-					href="#kontakt"
-					class="block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
-					onclick={closeMobile}
-				>
-					Kontakt
-				</a>
+					<a
+						href="#kontakt"
+						class="block w-full max-w-xs rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+						onclick={closeMobile}
+					>
+						Kontakt
+					</a>
+				</div>
 			</div>
 		</div>
 	{/if}
