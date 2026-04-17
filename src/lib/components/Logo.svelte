@@ -13,7 +13,8 @@
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 50 50"
-			class="block h-7 w-auto"
+			class="block h-12 w-auto"
+			fill-rule="evenodd"
 			aria-hidden="true"
 			role="img"
 		>
@@ -24,8 +25,14 @@
 				stroke-width="3"
 				stroke-linecap="round"
 			/>
-			<path d="M8,35 L11,32 H15 L18,35 L16,40 H10 Z" fill="#f97316" />
-			<circle cx="13" cy="36" r="1.5" fill="#111827" />
+			<!-- Zębatka 8-zębna: środek (17.35, 36.42); obrys ×1.2 względem bazowych promieni, otwór r=2.05 bez zmian -->
+			<g transform="translate(-3.25,0)">
+				<path
+					fill="#f97316"
+					fill-rule="evenodd"
+					d="M17.35,31L18.82,32.87L21.19,32.58L20.9,34.95L22.77,36.42L20.9,37.89L21.19,40.26L18.82,39.97L17.35,41.84L15.88,39.97L13.51,40.26L13.8,37.89L11.93,36.42L13.8,34.95L13.51,32.58L15.88,32.87Z M15.3,36.42a2.05,2.05 0 1 1 4.1,0a2.05,2.05 0 0 1 -4.1,0"
+				/>
+			</g>
 			<text x="20" y="32" font-family="Georgia, serif" font-weight="900" font-size="22" fill="#ffffff">I</text>
 		</svg>
 	</span>
