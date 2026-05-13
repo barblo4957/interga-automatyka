@@ -18,30 +18,30 @@
 
 				<div class="space-y-4 text-foreground/70 leading-relaxed">
 					<p>
-						<strong class="text-foreground">{SITE_DATA.name}</strong> to firma specjalizująca się
-						w kompleksowej obsłudze zakładów przemysłowych w zakresie automatyki, elektryki
-						i nowoczesnych systemów sterowania.
+						Naszą firmę tworzy zespół inżynierski posiadający pełne uprawnienia elektryczne, gazowe
+						oraz energetyczne SEP. Ponadto każda osoba techniczna przechodzi certyfikowane kursy i
+						szkolenia z zakresu automatyki, bezpieczeństwa sieci oraz bezpieczeństwa budowy maszyn.
+						Dzięki praktyce zdobytej przy realizacjach w sektorze produkcyjnym, chemicznym i
+						spożywczym — gwarantuje profesjonalne podejście do każdego projektu.
 					</p>
 					<p>
-						Jakub Pieczka to inżynier z wieloletnim doświadczeniem w branży, posiadający pełne
-						uprawnienia energetyczne SEP do 1kV oraz powyżej 1kV. Dzięki praktyce zdobytej
-						przy realizacjach w sektorze produkcyjnym, chemicznym i spożywczym — gwarantuje
-						profesjonalne podejście do każdego projektu.
-					</p>
-					<p>
-						Działamy na terenie całego Śląska i okolic, oferując szybki czas reakcji
-						i elastyczne podejście do potrzeb klienta. Każda realizacja kończy się
-						kompletną dokumentacją powykonawczą.
+						Działamy na terenie {SITE_DATA.serviceArea}, oferując szybki czas reakcji i elastyczne
+						podejście do potrzeb klienta. Każda realizacja kończy się kompletną dokumentacją
+						powykonawczą. Na każdy produkt oraz modernizację wystawiamy znak CE.
 					</p>
 				</div>
 
-				<div class="mt-8 flex items-center gap-4 text-sm text-foreground/50">
-					<span class="flex items-center gap-1.5">
-						<span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-						{SITE_DATA.contact.address}
+				<div class="mt-8 flex flex-col gap-2 text-sm text-foreground/50">
+					<span class="flex items-start gap-1.5">
+						<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+						<span>{SITE_DATA.contact.address}</span>
+					</span>
+					<span class="flex items-start gap-1.5">
+						<span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+						<span>Biuro i warsztat: {SITE_DATA.contact.addressWorkshop}</span>
 					</span>
 					<span class="flex items-center gap-1.5">
-						<span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+						<span class="h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
 						NIP: {SITE_DATA.contact.nip}
 					</span>
 				</div>

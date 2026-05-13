@@ -1,50 +1,41 @@
 <script lang="ts">
-	import { SITE_DATA } from '$lib/data';
-	import Factory from '@lucide/svelte/icons/factory';
-	import Building from '@lucide/svelte/icons/building';
-	import type { Component } from 'svelte';
+	type PartnerLogo = { src: string; alt: string; large?: boolean };
 
-	const logoIcons: Record<string, Component<{ size?: number; class?: string }>> = {
-		factory: Factory,
-		building: Building
-	};
+	const partnerLogos: PartnerLogo[] = [
+		{ src: '/logos/brembo.png', alt: 'Logo Brembo' },
+		{ src: '/logos/ekozub.png', alt: 'Logo Eko-Zub' },
+		{ src: '/logos/elbar-katowice.png', alt: 'Logo Elbar Katowice' },
+		{ src: '/logos/procelwag2.jpg', alt: 'Logo Procelwag' },
+		{ src: '/logos/orlen-terminka.svg', alt: 'Logo Orlen Terminka', large: true },
+		{ src: '/logos/pgnig2.jpg', alt: 'Logo PGNiG', large: true },
+		{ src: '/logos/hermon.png', alt: 'Logo Hermon', large: true }
+	];
 </script>
 
-<section class="py-24 px-6 md:px-12 lg:px-24 bg-slate-900">
-	<div class="max-w-7xl mx-auto">
-		<div class="text-center mb-16">
-			<p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Opinie</p>
-			<h2 class="text-3xl md:text-4xl font-bold text-white">
-				Zaufali <span class="text-accent">nam</span>
-			</h2>
-		</div>
+<section class="border-t border-foreground/10 bg-background py-24 px-6 md:px-12 lg:px-24">
+	<div class="mx-auto max-w-7xl">
+		<h2 class="mb-12 text-center text-3xl font-bold text-foreground md:mb-14 md:text-4xl">
+			Zaufali <span class="text-accent">nam</span>
+		</h2>
 
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			{#each SITE_DATA.testimonials as testimonial}
-				{@const Icon = logoIcons[testimonial.companyLogo] ?? Building}
-				<article
-					class="relative rounded-2xl border border-foreground/10 bg-slate-800/50 p-8
-					       transition-all duration-300 hover:border-accent/30"
+		<div
+			class="flex flex-row flex-wrap items-center justify-center gap-8 sm:gap-12"
+			aria-label="Logotypy firm, które nam zaufały"
+		>
+			{#each partnerLogos as { src, alt, large }}
+				<div
+					class="flex w-auto shrink-0 items-center justify-center {large
+						? 'h-[72px] sm:h-[120px]'
+						: 'h-14 sm:h-20'}"
 				>
-					<span class="absolute top-6 left-6 text-5xl font-serif text-accent leading-none" aria-hidden="true">"</span>
-					<span class="absolute top-6 right-6 text-5xl font-serif text-accent leading-none" aria-hidden="true">"</span>
-
-					<blockquote class="relative pt-8 pb-6 text-white text-base leading-relaxed">
-						{testimonial.quote}
-					</blockquote>
-
-					<div class="flex items-center gap-4">
-						<div
-							class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent"
-						>
-							<Icon size={24} />
-						</div>
-						<div>
-							<p class="font-semibold text-white">{testimonial.author}</p>
-							<p class="text-sm text-foreground/50">{testimonial.position}</p>
-						</div>
-					</div>
-				</article>
+					<img
+						{src}
+						{alt}
+						class="h-full w-auto max-w-full object-contain"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 			{/each}
 		</div>
 	</div>

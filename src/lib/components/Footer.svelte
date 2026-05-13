@@ -47,8 +47,10 @@
 				</h3>
 				<address class="not-italic text-sm text-foreground/60 space-y-2">
 					<p class="font-medium text-foreground">Integra Automatyka – Jakub Pieczka</p>
-					<p>ul. Owocowa 4, 44-360 Buków</p>
+					<p>{SITE_DATA.contact.address}</p>
+					<p>Biuro i warsztat: {SITE_DATA.contact.addressWorkshop}</p>
 					<p>NIP: {SITE_DATA.contact.nip}</p>
+					<p class="pt-1">Nr konta: {SITE_DATA.contact.bankAccount}</p>
 				</address>
 			</div>
 		</div>

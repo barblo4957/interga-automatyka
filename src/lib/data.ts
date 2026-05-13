@@ -1,9 +1,12 @@
 export const SITE_DATA = {
 	name: 'Integra Automatyka – Jakub Pieczka',
+	serviceArea: 'całej Polski',
 	contact: {
 		address: 'ul. Owocowa 4, 44-360 Buków',
+		addressWorkshop: 'ul. Stalowa 10, 47-400 Racibórz',
+		bankAccount: '97 1050 1344 1000 0090 8432 1117',
 		nip: '6472610507',
-		phone: '+48 123 456 789',
+		phone: '+48 530 934 510',
 		email: 'kontakt@integra-automatyka.pl'
 	},
 	services: [
@@ -78,29 +81,6 @@ export const SITE_DATA = {
 			title: 'Programowanie sterowników PLC',
 			category: 'Programowanie',
 			image: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=600&h=400&fit=crop'
-		}
-	],
-	testimonials: [
-		{
-			quote:
-				'Profesjonalne podejście i terminowa realizacja. Linia produkcyjna działa bez zarzutu od dnia odbioru.',
-			author: 'Marek Kowalski',
-			position: 'Dyrektor Produkcji',
-			companyLogo: 'factory'
-		},
-		{
-			quote:
-				'Pomiary i dokumentacja na najwyższym poziomie. Polecam Integra Automatyka jako rzetelnego partnera.',
-			author: 'Anna Nowak',
-			position: 'Kierownik Utrzymania Ruchu',
-			companyLogo: 'building'
-		},
-		{
-			quote:
-				'Od projektu po uruchomienie — jedna ręka. Świetna komunikacja i znajomość branży chemicznej.',
-			author: 'Tomasz Wiśniewski',
-			position: 'Specjalista ds. Automatyki',
-			companyLogo: 'factory'
 		}
 	]
 } as const;
