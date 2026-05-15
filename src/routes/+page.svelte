@@ -4,6 +4,7 @@
 	import Services from '$lib/components/Services.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import Testimonials from '$lib/components/Testimonials.svelte';
+	import Contact from '$lib/components/Contact.svelte';
 	import Booking from '$lib/components/Booking.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -13,5 +14,6 @@
 <Services />
 <Projects />
 <Testimonials />
+<Contact />
 <Booking />
 <Footer />
