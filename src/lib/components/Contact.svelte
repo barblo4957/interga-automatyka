@@ -124,25 +124,16 @@
 		'w-full rounded-xl border bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent/40';
 </script>
 
-<section id="kontakt" class="border-t border-foreground/10 py-24 px-6 md:px-12 lg:px-24">
-	<div class="mx-auto max-w-2xl">
-		<div class="mb-12 text-center">
-			<p class="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">Kontakt</p>
-			<h2 class="text-3xl font-bold text-foreground md:text-4xl">
-				Napisz do <span class="text-accent">nas</span>
-			</h2>
-			<p class="mx-auto mt-4 max-w-xl text-foreground/60">
-				Wypełnij formularz — otworzymy WhatsApp z gotową wiadomością. Odpowiemy tak szybko, jak to możliwe.
-			</p>
-		</div>
+<div class="flex h-full min-h-0 flex-col">
+	<p class="mb-4 text-sm font-semibold text-foreground/80">Napisz przez WhatsApp</p>
 
-		<form
-			onsubmit={handleSubmit}
-			class="rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-8
-			       shadow-[0_0_30px_rgba(249,115,22,0.08)] ring-1 ring-foreground/5"
-			novalidate
-		>
-			<div class="space-y-5">
+	<form
+		onsubmit={handleSubmit}
+		class="flex min-h-0 flex-1 flex-col rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-8
+		       shadow-[0_0_30px_rgba(249,115,22,0.08)] ring-1 ring-foreground/5"
+		novalidate
+	>
+			<div class="min-h-0 flex-1 space-y-5">
 				{#each fields as field}
 					<div>
 						<label for={field.id} class="mb-1.5 block text-sm font-medium text-foreground/80">
@@ -201,12 +192,11 @@
 
 			<button
 				type="submit"
-				class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-6 py-4 text-base font-semibold text-white
+				class="mt-6 shrink-0 flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-6 py-4 text-base font-semibold text-white
 				       shadow-lg shadow-accent/25 transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
 			>
 				<MessageCircle size={20} aria-hidden="true" />
 				Wyślij zapytanie przez WhatsApp
 			</button>
-		</form>
-	</div>
-</section>
+	</form>
+</div>
