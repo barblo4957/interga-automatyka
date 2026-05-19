@@ -9,7 +9,7 @@
 		<div class="min-h-[560px] flex-1 overflow-hidden rounded-xl bg-foreground/5 lg:min-h-0">
 			<iframe
 				title="Zarezerwuj termin — Cal.com"
-				src="https://cal.com/jane-doe/30min?embed=1"
+				src="https://cal.eu/pomiary/pomiary"
 				class="h-full min-h-[560px] w-full border-0 lg:min-h-full"
 				loading="lazy"
 			></iframe>
